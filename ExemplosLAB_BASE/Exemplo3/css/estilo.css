@@ -1,0 +1,163 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Shojumaru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
+
+@keyframes zoom{
+	0%{
+		transform: scale(1);
+	}	
+	50%{
+		transform: scale(2);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+@keyframes fadeIn{
+	0%{
+		opacity: 1;
+	}	
+	50%{
+		opacity: 0.3;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes move{
+	0%{
+		left: -100%;
+	}	
+	100%{
+		left: 0;
+	}
+}
+
+body{
+	padding: 0;
+	margin: 0;
+	font-family: "Annie Use Your Telescope";
+	font-size: 18pt;
+}
+
+#headerBlack{
+	font-family: "shojumaru";
+	background: linear-gradient(#000,#4e4c4c);
+	color: #fff;
+	height: 70px;
+	font-size: 26pt;
+	padding-top: 15px;
+}
+
+#headerBlue{
+	background: linear-gradient(#3a5e8d, #000);
+	height: 150px;
+	color: #fff;
+	border-top: 1px solid #315fac;
+	padding-top: 50px;
+}
+
+#headerBlue h1, #headerBlue p, #headerBlack p{
+	width: 960px;
+	margin: 10px auto;
+}
+
+#headerBlue p{
+	font-family: "Dancing script";
+	color: #b9d9ff;
+	text-shadow: 0 0 5px #0ff;
+}
+
+main{
+	margin: 0 auto;
+	width: 960px;
+}
+
+nav a{
+	display: block;
+	height: 30px;
+	width: 250px;
+	border-bottom: 1px solid #ccc;
+	padding-top: 10px;
+	text-decoration: none;
+}
+
+aside{
+	float: left;
+	width: 280px;
+}
+
+#content{
+	width: 600px;
+	float: left;
+	margin: 0 auto;
+}
+
+.news{
+	padding-left: 0;
+}
+
+.news li{
+	list-style: none;
+	margin-bottom: 1px solid #ccc;
+	margin-left: 0;
+	width: 250px;
+}
+
+footer{
+	width: 960px;
+	margin: 50px auto;
+	padding: 20px;
+	clear: both;
+}
+
+footer div{
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+
+#redes{
+	width: 100%;
+}
+
+#content figure{
+	float: left;
+	padding: 0;
+	margin: 10px;
+	width: 250px;
+	height: 200px;
+	position: relative;
+	overflow: hidden;
+}
+
+figure img{
+	width: 100%;
+	height: 100%;
+}
+
+#content figure:nth-child(1) img:hover{
+	animation: zoom 1s;
+}
+
+#content figure:nth-child(2) img:hover{
+	animation: fadeIn 2s;
+}
+
+#content figure:nth-child(3) figcaption{
+	height: 100%;
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+#content figure:nth-child(3):hover figcaption{
+	position: absolute;
+	top: 0;
+	background-color: rgba(255, 255, blue, 255, 0.8);
+	animation: move 1s;
+}
